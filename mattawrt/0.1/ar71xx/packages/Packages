@@ -3682,6 +3682,24 @@ Description:  libConfuse is a configuration file parser library, licensed under 
  and quick to integrate with your code. libConfuse was called libcfg
  before, but was changed to not confuse with other similar libraries.
 
+Package: conntrack-tools
+Version: 1.0.0-1
+Depends: libc, libnetfilter-conntrack
+Source: package/network/utils/conntrack-tools
+Section: net
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 84288
+Filename: conntrack-tools_1.0.0-1_ar71xx.ipk
+Size: 84482
+MD5Sum: 941da8876ced1d5d2c9b29ee2516f3c1
+SHA256sum: 7b7412572adee1f7e8bc73db35da67fd6ffc052d22ad84f9041bee9822530fc0
+Description:  The conntrack-tools are a set of free software userspace tools for Linux
+ that allow system administrators interact with the Connection Tracking
+ System, which is the module that provides stateful packet inspection for
+ iptables. The conntrack-tools are the userspace daemon conntrackd and the
+ command line interface conntrack.
+
 Package: convbin
 Version: 2.4.2_p4
 Depends: libc, libpthread, librt
@@ -16925,6 +16943,22 @@ MD5Sum: d6927c394e5e8bdfbc828e81b9e0e1ee
 SHA256sum: e3cf955d90efd9ce1e9d67896b57198a52560fc7ff076208332887d0a35a18fa
 Description:  Kernel module for network block device support
 
+Package: kmod-nf-conntrack-netlink
+Version: 3.10.36-1
+Depends: kernel (=3.10.36-1-29a0e9a8a08b4c0f3f6a9d96c1f2bdac), kmod-nfnetlink, kmod-ipt-conntrack
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ar71xx
+Installed-Size: 105
+Filename: kmod-nf-conntrack-netlink_3.10.36-1_ar71xx.ipk
+Size: 734
+MD5Sum: 13e6eb00f84cf920dba55f15116f0bf7
+SHA256sum: 7f73c161ad3f7189e7e4759b995a1a544c3a702dcfcf5749767c114006b1bdb3
+Description:  Kernel modules support for a netlink-based connection tracking
+ userspace interface
+
 Package: kmod-nfnetlink-log
 Version: 3.10.36-1
 Depends: kernel (=3.10.36-1-29a0e9a8a08b4c0f3f6a9d96c1f2bdac), kmod-nfnetlink
@@ -20700,6 +20734,40 @@ Description:  LibMMS is a common library for parsing mms:// and mmsh:// type net
  LibMMS itself is only for receiving MMS stream,
  it doesn't handle sending at all.
 
+Package: libmnl
+Version: 1.0.3-1
+Depends: libc
+Source: package/libs/libmnl
+Section: libs
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 5173
+Filename: libmnl_1.0.3-1_ar71xx.ipk
+Size: 6200
+MD5Sum: fc218248bfc74ddc76ba8d492275ddf4
+SHA256sum: a9e5ecdeb79771c97a988710a8a4dec9471d61772b225bcffe72fd7a179f46bf
+Description:  libmnl is a minimalistic user-space library oriented to Netlink developers.
+ There are a lot of common tasks in parsing, validating, constructing of
+ both the Netlink header and TLVs that are repetitive and easy to get wrong.
+ This library aims to provide simple helpers that allows you to re-use code
+ and to avoid re-inventing the wheel. The main features of this library are:
+ .
+ * Small: the shared library requires around 30KB for an x86-based computer.
+ .
+ * Simple: this library avoids complexity and elaborated abstractions that
+ tend to hide Netlink details.
+ .
+ * Easy to use: the library simplifies the work for Netlink-wise developers.
+ It provides functions to make socket handling, message building, validating,
+ parsing and sequence tracking, easier.
+ .
+ * Easy to re-use: you can use the library to build your own abstraction layer
+ on top of this library.
+ .
+ * Decoupling: the interdependency of the main bricks that compose the library
+ is reduced, i.e. the library provides many helpers, but the programmer is not
+ forced to use them.
+
 Package: libmodbus
 Version: 3.0.6-1
 Depends: libc
@@ -20936,6 +21004,24 @@ Description:  libnetconf is the NETCONF library in C intended for building NETCO
  libnetconf provides basic functions to connect NETCONF client and server to each other via
  SSH, to send and receive NETCONF messages and to store and work with the configuration data 
  in a datastore.
+
+Package: libnetfilter-conntrack
+Version: 1.0.3-1
+Depends: libc, libnfnetlink, kmod-nf-conntrack-netlink, libmnl
+Source: package/libs/libnetfilter-conntrack
+Section: libs
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 28271
+Filename: libnetfilter-conntrack_1.0.3-1_ar71xx.ipk
+Size: 28651
+MD5Sum: 567ce4d1a53636d4f930a9194c553a7a
+SHA256sum: 0dd41b0e9106a77ee63383053be9d2923a041dd417f7dce51df5620ab1ed084a
+Description:  libnetfilter_conntrack is a userspace library providing a programming
+ interface (API) to the in-kernel connection tracking state table. The
+ library libnetfilter_conntrack has been previously known as
+ libnfnetlink_conntrack and libctnetlink. This library is currently
+ used by conntrack-tools among many other applications.
 
 Package: libnetfilter-log
 Version: 1.0.0-1
