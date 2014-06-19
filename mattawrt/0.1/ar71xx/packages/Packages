@@ -31567,6 +31567,20 @@ Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  as a full-strength general purpose cryptography library.
  This package contains the OpenSSL command-line utility.
 
+Package: openvpn-openssl
+Version: 2.3.2-3
+Depends: libc, kmod-tun, libopenssl
+Source: package/network/services/openvpn
+Section: net
+Maintainer: Mirko Vogt <mirko@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 126405
+Filename: openvpn-openssl_2.3.2-3_ar71xx.ipk
+Size: 125841
+MD5Sum: bf2e0f691d56e76e27a4db627e24c401
+SHA256sum: b5636a78df75c8f3a2aca630a0230fe40ccc8d19dcb5a746d13633f2e271b017
+Description:  Open source VPN solution using OpenSSL
+
 Package: oping
 Version: 1.6.2-1
 Depends: libc, liboping
